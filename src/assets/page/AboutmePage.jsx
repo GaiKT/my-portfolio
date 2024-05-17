@@ -8,8 +8,8 @@ export default function AboutmePage() {
         <Showpeofile width={'2'} text={false}/>
         <div className='w-4/6 bg-gradient-to-br from-blue-600 to-blue-900 shadow-lg rounded-s-xl border-none flex items-center justify-around p-20'>
             <div className='w-4/6 border p-10 rounded-tl-xl rounded-br-xl'>
-                <div className='flex flex-col items-center text-white text-lg gap-4 mb-5'>
-                    <h1 className=' text-2xl'>
+                <div className='flex flex-col items-center text-white text-lg gap-4 mb-10 relative'>
+                    <h1 className=' text-2xl absolute top-[-60px] bg-[#2252C3] px-2 rounded-full'>
                         ABOUT ME
                     </h1>
                     <p>
