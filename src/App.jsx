@@ -1,7 +1,6 @@
-import './App.css'
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import Navbar from './component/Navbar'
-import HomePage from './assets/page/HomePage'
+import React from 'react';
+import { Routes, Route} from 'react-router-dom';
+import HomePage from './assets/page/HomePage';
 import AboutmePage from './assets/page/AboutmePage';
 import WorkExp from './assets/page/WorkExp';
 import ProsernalskillPage from './assets/page/ProsernalskillPage';
@@ -11,9 +10,7 @@ import ProjectPage from './assets/page/ProjectPage';
 
 function App() {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-800 to-slate-950 flex relative'>
-      <Navbar/>
-      <Router>
+    <div className='bg-gradient-to-br from-blue-600 to-blue-900'>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/aboutme" element={<AboutmePage />} />
@@ -23,10 +20,8 @@ function App() {
           <Route path="/contactme" element={<ContactmePage />} />
           <Route path="/project" element={<ProjectPage />} />
         </Routes>
-      </Router>
-      
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
