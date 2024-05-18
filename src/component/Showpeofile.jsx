@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 
 export default function Showpeofile({width,text,position}) {
   return (
-    <>
     <div className={`flex justify-start items-center relative text-white pl-20 w-${width}/6`}>
       { text && 
         <motion.div 
@@ -44,8 +43,7 @@ export default function Showpeofile({width,text,position}) {
           ease: 'anticipate',
           duration: 0.85
         }}
-      src={myProFile} width={400} className=' absolute bottom-0 right-0 opacity-60'/>
+      src={myProFile} width={400} className='absolute bottom-0 right-0 opacity-60'/>
     </div>
-    </>
   )
 }

@@ -8,7 +8,7 @@ export default function WorkExp() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-800 to-slate-950 flex relative">
         <Navbar/>
-        <Showpeofile width={'2'} text={false} position={{start:'40vw'}}/>
+        <Showpeofile width={2} text={false} position={{start:'40vw'}}/>
         <motion.div 
             initial={{
                     opacity: 0.5,
@@ -40,9 +40,11 @@ export default function WorkExp() {
                         </div>
                     </div>
                 </div>
-                <Link to={'/'} className='p-2 bg-white rounded-lg hover:bg-blue-500 transition-all hover:shadow-xl'>
-                    Comeback Home
-                </Link>
+                    <Link to={'/'}>
+                        <button className='p-2 bg-slate-400 rounded-lg hover:bg-blue-500 transition-all shadow-xl'>
+                            Home
+                        </button>
+                    </Link>
             </div>
         </motion.div>
 </div>

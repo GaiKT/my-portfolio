@@ -10,7 +10,6 @@ import ProjectPage from './assets/page/ProjectPage';
 
 function App() {
   return (
-    <div className='bg-gradient-to-br from-blue-600 to-blue-900'>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/aboutme" element={<AboutmePage />} />
@@ -20,7 +19,6 @@ function App() {
           <Route path="/contactme" element={<ContactmePage />} />
           <Route path="/project" element={<ProjectPage />} />
         </Routes>
-    </div>
   );
 }
 

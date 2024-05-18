@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-800 to-slate-950 flex relative overflow-hidden">
         <Navbar />
-        <Showpeofile width={'4'} text={true} position={{start: '0' , end : '30vw'}}/>
+        <Showpeofile width={4} text={true} position={{start: '0' , end : '30vw'}}/>
         <motion.div 
           initial={{
             opacity : 0.5,
