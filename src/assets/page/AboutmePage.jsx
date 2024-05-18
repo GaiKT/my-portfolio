@@ -10,7 +10,7 @@ export default function AboutmePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-800 to-slate-950 flex relative">  
         <Navbar/>
-        <Showpeofile width={2} text={false} position={{start:'40vw'}}/>
+        <Showpeofile value={2} text={false} position={{start:'40vw'}}/>
         <motion.div 
             initial={{
                 opacity: 0.5,

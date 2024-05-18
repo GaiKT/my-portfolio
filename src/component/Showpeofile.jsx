@@ -3,9 +3,9 @@ import myProFile from '../assets/img/myprofile-cutouts.png'
 import { motion } from 'framer-motion';
 
 
-export default function Showpeofile({width,text,position}) {
+export default function Showpeofile({value,text,position}) {
   return (
-    <div className={`flex justify-start items-center relative text-white pl-20 w-${width}/6`}>
+    <div className={`flex justify-start items-center relative text-white pl-20 w-${value}/6`}>
       { text && 
         <motion.div 
           initial={{
