@@ -1,0 +1,5 @@
+[[redirects]]
+from = "/best-pets/dogs"
+to = "/best-pets/cats.html"
+status = 200
+force = true

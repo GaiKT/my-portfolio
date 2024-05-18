@@ -6,12 +6,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub} from '@fortawesome/free-brands-svg-icons'
 
 //image
-import SQLCer from '../img/SQLcer.png'
 import TipCalculator from '../img/tipcalculator-page-1.png'
 import TouristYourTrips from '../img/touristyourtrips-page-1.png'
 import TravelCompany from '../img/travelcompany-page-1.png'
 import Todolist from '../img/todolist.png'
 import DatacenterApp from '../img/idcapp2.png'
+import Portfolio from '../img/portfolio website.png'
+import Qrcode from '../img/qrcode.jpg'
+import MusicPage from '../img/musicpage.jpg'
+import NftCard from '../img/nftcard.jpg'
+import productCard from '../img/productcard.jpg'
 
 
 import Navbar from '../../component/Navbar'
@@ -21,41 +25,55 @@ const miniProject = [
     {
         name : 'Tip Calculator',
         discription : 'Webapp for calculate tip price uses react tailwindCSS',
-        img : TipCalculator
+        img : TipCalculator,
+        url : 'https://boisterous-sorbet-91202f.netlify.app'
     },
     {
         name : 'Travel Company',
         discription : 'Landing page reference to figma uses tailwindCSS.',
-        img : TravelCompany
+        img : TravelCompany ,
+        url : 'https://friendly-griffin-324215.netlify.app'
     },
     {
         name : 'Tourist search your trips',
         discription : 'Get data from mockup API database fetch data to landing page and search keywords',
-        img : TouristYourTrips
+        img : TouristYourTrips ,
+        url : 'https://regal-mermaid-0a6221.netlify.app'
     },
     {
         name : 'Todo list app',
         discription : 'Webapp creates new to-dos and completes to-dos that you can drag and drop to assign importance.',
-        img : Todolist
+        img : Todolist ,
+        url : 'https://eclectic-macaron-cce88d.netlify.app'
+    },
+    {
+        name : 'Portfolio Website',
+        discription : 'Webportfolio uses react.js tailwindCSS and framer-motion This is a smooth site.',
+        img : Portfolio,
+        url : 'https://gai-protfolio.netlify.app'
     },
 ]
 
 const styleSideProject = [
     {
-        name : 'QRcord Page',
-        img : SQLCer
+        name : 'QRcord card',
+        img : Qrcode,
+        url : 'https://github.com/GaiKT/sideproject-Style-QRcode-page'
     },
     {
-        name : 'Responsive Page',
-        img : SQLCer
+        name : 'Product card',
+        img : MusicPage,
+        url : 'https://github.com/GaiKT/sideproject-style-respornsive-page'
     },
     {
-        name : 'Cardmusic Page',
-        img : SQLCer
+        name : 'Music card',
+        img : NftCard,
+        url : 'https://github.com/GaiKT/sideproject-style-card-music'
     },
     {
         name : 'NFTcard',
-        img : SQLCer
+        img : productCard,
+        url : 'https://github.com/GaiKT/sideproject-style-NFTcard'
     },
 ]
 
@@ -98,22 +116,27 @@ export default function ProjectPage() {
                                 <li>Send and store reports can be downloaded at any time.</li>
                                 <li>Username password authentication login with token can expire.</li>
                             </p>
-                            <a href="https://github.com/GaiKT/IDC-Assitance-app-frontend" target='blank' className='text-xs'> <FontAwesomeIcon icon={faGithub}/> View on Github repository</a>
+                            <a href="https://github.com/GaiKT/IDC-Assitance-app-frontend" target='blank' className='text-xs mr-5'> <FontAwesomeIcon icon={faGithub}/> Github Front-end repository</a>
+                            <a href="https://github.com/GaiKT/BackEnd-idc-assitance-app" target='blank' className='text-xs'> <FontAwesomeIcon icon={faGithub}/> Github Black-end repository</a>
                         </div>  
                     </div>
                     <h1 className='bg-blue-950 w-full text-center p-2 mt-4 rounded'>
                         SIDE PROJECT
                     </h1>
                     <div className='grid grid-cols-3 gap-5'>
+                        
                         {miniProject.map((project , index) => {
                             return (
-                                <div key={index} className='p-2 rounded-lg text-center cursor-pointer hover:scale-105 transition-all'>
-                                    <div>
-                                        <img src={project.img} className='w-full h-48 object-cover rounded-md mb-2' />
+                                <Link to={project.url} target='blank' >
+                                    <div key={index} 
+                                    className='p-2 rounded-lg text-center cursor-pointer hover:scale-105 transition-all'>
+                                        <div>
+                                            <img src={project.img} className='w-full h-48 object-cover rounded-md mb-2' />
+                                        </div>
+                                        <p  className='bg-blue-500'>{project.name}</p>
+                                        <p className='text-xs bg-blue-200 rounded-b-md text-blue-900 p-1'>{project.discription}</p>
                                     </div>
-                                    <p  className='bg-blue-500'>{project.name}</p>
-                                    <p className='text-xs bg-blue-200 rounded-b-md text-blue-900 p-1'>{project.discription}</p>
-                                </div>
+                                </Link>
                             );
                         })}     
                     </div>
@@ -124,10 +147,12 @@ export default function ProjectPage() {
                         {
                             styleSideProject.map((project , index) => {
                                 return(
-                                    <div key={index} className='p-2 rounded-lg text-center hover:shadow-lg  cursor-pointer hover:scale-105 transition-all'>
-                                        <img src={project.img} width={300} className='rounded-lg mb-2'/>
-                                        <p>{project.name}</p>
-                                    </div>
+                                    <Link to={project.url} target='blank'>
+                                        <div key={index} className='p-2 rounded-lg text-center hover:shadow-lg  cursor-pointer hover:scale-105 transition-all'>
+                                            <img src={project.img} className='rounded-lg mb-2 h-40'/>
+                                            <p>{project.name}</p>
+                                        </div>
+                                    </Link>
                                 );
                             })
                         }
