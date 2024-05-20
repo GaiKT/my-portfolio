@@ -1,16 +1,31 @@
 import React from 'react'
 import Showpeofile from '../../component/Showpeofile'
 import { Link } from 'react-router-dom'
+
+// certificate img
 import SQLCer from '../img/SQLcer.png'
 import NTDBCer from '../img/NotionDBcer.png'
+import Bp from '../img/bp.png'
+
 import Navbar from '../../component/Navbar'
 import { motion } from 'framer-motion'
+
+const certificate = [
+    {name : 'Basic Programming',
+    img : Bp,},
+    {name : 'Front-end Developer',
+    img : Bp,},
+    {name : 'Notion Database',
+    img : NTDBCer,},
+    {name : 'Essential SQL',
+    img : SQLCer,},
+]
 
 export default function CertificatePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-800 to-slate-950 flex relative">
         <Navbar/>
-        <Showpeofile value={2} text={false} position={{start:'40vw'}}/>
+        <Showpeofile text={false} position={{start:'40vw'}}/>
         <motion.div 
         initial={{
             opacity: 0.5,
@@ -32,22 +47,16 @@ export default function CertificatePage() {
                         CETIFICATE
                     </h1>
                     <div className='grid grid-cols-3 gap-5'>
-                        <div className='p-2 border rounded-lg text-center hover:shadow-lg hover:bg-blue-400 hover:text-blue-950 cursor-pointer hover:scale-105 transition-all'>
-                            <img src={SQLCer} width={300} className='rounded-lg mb-2'/>
-                            <p>Basic Programming</p>
-                        </div>
-                        <div className='p-2 border rounded-lg text-center hover:shadow-lg hover:bg-blue-400 hover:text-blue-950 cursor-pointer hover:scale-105 transition-all'>
-                            <img src={SQLCer} width={300} className='rounded-lg mb-2'/>
-                            <p>Front-end Developer</p>
-                        </div>   
-                        <div className='p-2 border rounded-lg text-center hover:shadow-lg hover:bg-blue-400 hover:text-blue-950 cursor-pointer hover:scale-105 transition-all'>
-                            <img src={NTDBCer} width={300} className='rounded-lg mb-2'/>
-                            <p>Notion Database</p>
-                        </div>   
-                        <div className='p-2 border rounded-lg text-center hover:shadow-lg hover:bg-blue-400 hover:text-blue-950 cursor-pointer hover:scale-105 transition-all'>
-                            <img src={SQLCer} width={300} className='rounded-lg mb-2'/>
-                            <p>Essential SQL</p>
-                        </div>   
+                        {
+                            certificate.map((cer , index) => {
+                                return (
+                                    <div key={index} className='p-2 border rounded-lg text-center hover:shadow-lg hover:bg-blue-400 hover:text-blue-950 cursor-pointer hover:scale-105 transition-all'>
+                                        <img src={cer.img} className='rounded-lg mb-2 h-40 w-full'/>
+                                        <p>{cer.name}</p>
+                                    </div>
+                                );
+                            })
+                        }   
                     </div>
                 </div>
                 <Link to={'/'}>

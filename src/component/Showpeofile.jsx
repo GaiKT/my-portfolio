@@ -3,9 +3,10 @@ import myProFile from '../assets/img/myprofile-cutouts.png'
 import { motion } from 'framer-motion';
 
 
-export default function Showpeofile({value,text,position}) {
+export default function Showpeofile({text,position}) {
+  console.log(text)
   return (
-    <div className={`flex justify-start items-center relative text-white pl-20 w-${value}/6`}>
+    <div className={`flex justify-start items-center relative text-white pl-20 ${ text === true ? 'w-4/6' : 'w-2/6'}`}>
       { text && 
         <motion.div 
           initial={{

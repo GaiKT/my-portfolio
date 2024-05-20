@@ -8,7 +8,7 @@ export default function WorkExp() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-800 to-slate-950 flex relative">
         <Navbar/>
-        <Showpeofile value={2} text={false} position={{start:'40vw'}}/>
+        <Showpeofile text={false} position={{start:'40vw'}}/>
         <motion.div 
             initial={{
                     opacity: 0.5,
@@ -24,7 +24,7 @@ export default function WorkExp() {
                 duration: 0.85
             }}        
         className='w-4/6 bg-gradient-to-br from-blue-600 to-blue-900 shadow-lg rounded-s-xl border-none flex items-center justify-around p-10'>
-            <div className='w-4/6 border p-5 rounded-tl-xl rounded-br-xl'>
+            <div className='w-5/6 border p-5 rounded-tl-xl rounded-br-xl'>
                 <div className='flex flex-col items-center text-white text-lg gap-4 mb-8 relative'>
                     <h1 className=' text-2xl absolute top-[-40px] bg-[#2254C7] px-2 rounded-full'>
                         WORK EXPERIENCE
