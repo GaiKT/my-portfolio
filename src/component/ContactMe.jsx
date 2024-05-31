@@ -6,7 +6,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 
 export default function ContactMe() {
   return (
-    <div className='flex flex-col font-semibold justify-center items-center text-white w-1/3'>
+    <div className='flex flex-col font-semibold justify-center items-center text-white w-1/3 max-md:hidden'>
     Contact Me
     <ul className='text-lg flex w-40 justify-around mt-2'>
         <li className='hover:text-xl transition-all w-5'>

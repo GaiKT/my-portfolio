@@ -10,7 +10,8 @@ import { motion } from 'framer-motion'
 
 export default function ContactmePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-800 to-slate-950 flex relative">
+    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-800 to-slate-950 flex relative max-md:hidden">
         <Navbar />
         <Showpeofile text={false} position={{start:'40vw'}}/>
         <motion.div 
@@ -56,5 +57,53 @@ export default function ContactmePage() {
             </div>
         </motion.div>
     </div>
+
+    {/* respornsive mobile */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-800 to-slate-950 flex relative md:hidden">
+        <Navbar />
+        <motion.div 
+            initial={{
+                opacity: 0.5,
+                x: '40vw',
+            }}
+            animate={{
+                opacity: 1,
+                x: 0,
+            }}
+            transition={{
+                type: 'tween',
+                ease: 'anticipate',
+                duration: 0.85
+            }}        
+        className='w-full bg-gradient-to-br from-blue-600 to-blue-900 shadow-lg rounded-s-xl border-none flex items-center justify-around mt-20'>
+            <div className='w-5/6 border p-5 rounded-tl-xl rounded-br-xl'>
+                <div className='flex flex-col items-center text-white text-lg gap-4 mb-10 relative'>
+                    <h1 className='text-2xl'>
+                        CONTACT DETAILS
+                    </h1>
+                    <div className='flex flex-col gap-4 w-full justify-center items-center'>
+                        <p className='w-full border py-1 rounded-md'>
+                            <span className='py-2 px-3 rounded-md bg-blue-300'><FontAwesomeIcon icon={faEnvelope}/></span> natthapnggai4@gmail.com
+                        </p>
+                        <p className='w-full  border py-1 rounded-md'>
+                            <span className='py-2 px-3 rounded-md bg-blue-300'><FontAwesomeIcon icon={faPhone}/></span> 061-404-1994
+                        </p>
+                        <p className='w-full  border py-1 rounded-md'>
+                            <span className='py-2 px-3 rounded-md bg-blue-300'><FontAwesomeIcon icon={faGithub}/></span><a href="https://github.com/GaiKT" > GitHub Profile</a>
+                        </p>
+                        <p className='w-full  border py-1 rounded-md'>
+                            <span className='py-2 px-3 rounded-md bg-blue-300'><FontAwesomeIcon icon={faLinkedin}/></span><a href="https://www.linkedin.com/in/natthapong-kamtong-235aa92a8/" > Linkedin Profile</a>
+                        </p>
+                    </div>
+                </div>
+                <Link to={'/'}>
+                        <button className='p-2 bg-slate-400 rounded-lg hover:bg-blue-500 transition-all shadow-xl'>
+                            Home
+                        </button>
+                </Link>
+            </div>
+        </motion.div>
+    </div>
+    </>
   )
 }

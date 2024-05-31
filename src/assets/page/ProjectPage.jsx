@@ -16,12 +16,19 @@ import Qrcode from '../img/qrcodecard.jpg'
 import Product from '../img/product card.jpg'
 import Nftcard from '../img/nftcard.jpg'
 import Music from '../img/musiccard.jpg'
+import Ecommerce from '../img/ecommerce.png'
 
 
 import Navbar from '../../component/Navbar'
 import { motion } from 'framer-motion'
 
 const miniProject = [
+    {
+        name : 'E-commerce ReactTS Redux-toolkit',
+        discription : 'full e-commerce website serach products add to cart calculate totalprice (username : aa@bb.cc password:12345678)',
+        img : Ecommerce,
+        url : 'https://e-commerce-react-ts-frontend-with-api.netlify.app/'
+    },
     {
         name : 'Tip Calculator',
         discription : 'Webapp for calculate tip price uses react tailwindCSS',
@@ -81,7 +88,7 @@ export default function ProjectPage() {
   return (
     <div className="min-h-screen relative">
         <Navbar/>
-        <div className='bg-gradient-to-br from-slate-800 to-slate-950 flex items-center justify-around p-20'>
+        <div className='bg-gradient-to-br from-slate-800 to-slate-950 flex items-center justify-around md:p-20'>
             <motion.div 
             initial={{
                 opacity: 0.5,
@@ -104,7 +111,7 @@ export default function ProjectPage() {
                     <h1 className='bg-blue-950 w-full text-center p-2 mt-4 rounded'>
                         MAIN PROJECT
                     </h1>
-                    <div className='flex justify-center my-10 gap-4 px-10'>
+                    <div className='flex justify-center my-10 gap-4 md:px-10 max-md:flex-col'>
                         <div className='flex-1 flex justify-center px-5'>
                             <img src={DatacenterApp} className='rounded-lg hover:scale-105 hover:shadow-2xl cursor-pointer transition-all'/>
                         </div> 
@@ -125,7 +132,7 @@ export default function ProjectPage() {
                     <h1 className='bg-blue-950 w-full text-center p-2 mt-4 rounded'>
                         SIDE PROJECT
                     </h1>
-                    <div className='grid grid-cols-3 gap-5 px-10'>
+                    <div className='grid grid-cols-3 gap-5 px-10 max-md:grid-cols-1'>
                         {miniProject.map((project , index) => {
                             return (
                                 <Link to={project.url} target='blank'>
@@ -143,7 +150,7 @@ export default function ProjectPage() {
                     <h1 className='bg-blue-950 w-full text-center p-2 mt-4 rounded'>
                         Decorative components
                     </h1>
-                    <div className='grid grid-cols-4 gap-5 text-xs px-10'>
+                    <div className='grid grid-cols-4 gap-5 text-xs md:px-10 max-md:grid-cols-1'>
                         {
                             styleSideProject.map((project , index) => {
                                 return(

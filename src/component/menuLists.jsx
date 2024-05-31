@@ -3,8 +3,8 @@ import React from 'react'
 export default function MenuLists() {
   return (
             <>
-                <p className='font-light text-xl text-white text-center mb-2'>Menu Lists</p>
-                <ul className='flex flex-col gap-3 text-gray-300 font-semibold p-5 rounded-lg bg-blue-700 shadow-lg w-4/6'>
+                <p className='font-light text-xl text-white text-center mb-2 max-md:hidden'>Menu Lists</p>
+                <ul className='flex flex-col gap-3 text-gray-300 font-semibold p-5 rounded-lg md:bg-blue-700 shadow-lg md:w-4/6'>
                     <li className='hover:cursor-pointer hover:ml-2 hover:text-white transition-all'>
                         <a href="/aboutme">ABOUT ME</a>
                     </li>
