@@ -7,6 +7,7 @@ import ProsernalskillPage from './assets/page/ProsernalskillPage';
 import CertificatePage from './assets/page/CertificatePage';
 import ContactmePage from './assets/page/ContactmePage';
 import ProjectPage from './assets/page/ProjectPage';
+import "./App.css";
 
 function App() {
   return (

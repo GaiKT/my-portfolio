@@ -79,13 +79,13 @@ export default function AboutmePage() {
                 ease: 'anticipate',
                 duration: 0.85
             }}
-        className='w-full bg-gradient-to-br from-blue-600 to-blue-900 shadow-lg rounded-s-xl border-none flex items-center mt-20 justify-around'>
+        className='w-full bg-gradient-to-br from-blue-600 to-blue-900 shadow-lg rounded-s-xl border-none flex items-center mt-20 py-5 justify-around'>
             <div className='w-5/6 border p-2 rounded-tl-xl rounded-br-xl'>
                 <div className='flex flex-col items-center text-white text-xs gap-4 relative'>
                     <h1 className=' text-2xl'>
                         ABOUT ME
                     </h1>
-                    <div className='flex flex-col gap-5 text-sm font-extralight'>
+                    <div className='flex flex-col gap-5 font-extralight'>
                         <p className='indent-5'>
                             I am passionate about technology and aspire to excel as a <span className='font-bold'>Full-Stack Developer</span>. I am a quick learner and dedicated to continuous self-improvement and lifelong learning.
                         </p>

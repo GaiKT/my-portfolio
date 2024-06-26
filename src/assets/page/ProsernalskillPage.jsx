@@ -38,6 +38,7 @@ export default function HomePage() {
                             <h1 className='bg-blue-950 shadow-lg rounded-md text-center'>Front-end</h1>
                             <div className='pl-3 mt-2 text-sm'>
                                 <p>React</p>
+                                <p>Next</p>
                                 <p>Tailwind CSS</p>
                             </div>
                         </div>
@@ -46,13 +47,14 @@ export default function HomePage() {
                             <div className='pl-3 mt-2 text-sm'>
                                 <p>Node</p>
                                 <p>Express</p>
+                                <p>Nest</p>
                             </div>
                         </div>
                         <div>
                             <h1 className='bg-blue-950 shadow-lg rounded-md text-center'>Database</h1>
                             <div className='pl-3 mt-2 text-sm'>
-                                <p>MongoDB</p>
-                                <p>PostgreSQL</p>
+                                <p>SQL</p>
+                                <p>NoSQL</p>
                             </div>
                         </div>
                         <div>
@@ -66,7 +68,7 @@ export default function HomePage() {
                 </div>
                 <div className='flex justify-center'>
                     <Link to={'/'}>
-                        <button className='p-2 bg-slate-400 rounded-lg hover:bg-blue-500 transition-all shadow-xl'>
+                        <button className='p-2 bg-slate-400 rounded-lg text-white hover:bg-blue-500 transition-all shadow-xl'>
                             Home
                         </button>
                     </Link>
